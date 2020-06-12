@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Mon app\'</string>
+    <string name="bienvenue">Bonjour !</string>
+    <string name="connexion">Connexion</string>
+    <string name="tapez_votre_nom">Tapez votre nom</string>
+    <string name="nom">Nom</string>
+    <string name="me_connecter">Me connecter</string>
+    <string name="email">email</string>
+    <string name="soucis_de_connexion">Soucis de connexion ?</string>
+</resources>

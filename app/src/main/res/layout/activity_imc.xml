@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A3DDFD"
+    tools:context=".ImcActivity">
+
+    <TextView
+        android:id="@+id/textViewCalculerIMC"
+        android:layout_width="189dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="114dp"
+        android:autoSizeTextType="uniform"
+        android:text="@string/calculer_mon_imc"
+        android:textColor="#2196F3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewPoids"
+        android:layout_width="79dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="192dp"
+        android:autoSizeTextType="uniform"
+        android:text="Poids"
+        android:textColor="#2196F3"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCalculerIMC" />
+
+    <EditText
+        android:id="@+id/editTextPoids"
+        android:layout_width="87dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="180dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/textViewPoids"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCalculerIMC" />
+
+    <TextView
+        android:id="@+id/textViewTaille"
+        android:layout_width="83dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:autoSizeTextType="uniform"
+        android:text="@string/taille"
+        android:textColor="#2196F3"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPoids" />
+
+    <EditText
+        android:id="@+id/editTextTaille"
+        android:layout_width="87dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="9dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toEndOf="@+id/textViewTaille"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPoids" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="123dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="244dp"
+        android:checkedButton="@id/radioButtonCm"
+        android:forceDarkAllowed="false"
+        android:orientation="horizontal"
+        android:showDividers="middle|beginning|end"
+        android:soundEffectsEnabled="true"
+        android:textAlignment="viewEnd"
+        android:textDirection="locale"
+        app:layout_constraintStart_toEndOf="@+id/editTextTaille"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCalculerIMC">
+
+        <RadioButton
+            android:id="@+id/radioButtonCm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center|clip_vertical"
+            android:text="cm" />
+
+        <RadioButton
+            android:id="@+id/radioButtonMetre"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:lineSpacingExtra="10sp"
+            android:text="m" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonCalculer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/calculer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTaille" />
+
+    <Button
+        android:id="@+id/buttonRetourAccueil"
+        android:layout_width="199dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
+        android:text="Retourner à l'accueil"
+        app:layout_constraintStart_toEndOf="@+id/buttonEffacer2"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResultat" />
+
+    <Button
+        android:id="@+id/buttonEffacer2"
+        android:layout_width="92dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/effacerIMC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCalculer" />
+
+    <TextView
+        android:id="@+id/textViewResultat"
+        android:layout_width="127dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:autoSizeTextType="uniform"
+        android:text="@string/resultat"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@+id/buttonCalculer"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="228dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="56dp"
+        android:autoSizeTextType="uniform"
+        android:buttonTint="#2196F3"
+        android:text="MEGAFONCTION"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCalculerIMC" />
+
+    <TextView
+        android:id="@+id/textViewInfoMegaFonction"
+        android:layout_width="383dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="13dp"
+        android:text="@string/je_reconnais_que_lorsque_je_coche_megafonction_je_d_douane_le_fabricant_de_toute_responsabilit_quant_ce_qui_pourrait_arriver"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+

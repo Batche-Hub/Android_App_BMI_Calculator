@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Mon app\'</string>
+    <string name="bienvenue">Bonjour !</string>
+    <string name="connexion">Connexion</string>
+    <string name="tapez_votre_nom">Tapez votre nom</string>
+    <string name="nom">Nom</string>
+    <string name="me_connecter">Me connecter</string>
+    <string name="email">email</string>
+    <string name="soucis_de_connexion">Soucis de connexion ?</string>
+    <string name="mot_de_passe">Mot de passe</string>
+    <string name="e_mail">E-mail</string>
+    <string name="bonjourDisplayMessage">Bonjour</string>
+    <string name="vous_etes_connectee">Vous êtes connecté.e !</string>
+    <string name="annulerActivityMain">Annuler</string>
+    <string name="resultat">Résultat</string>
+    <string name="calculer">Calculer</string>
+    <string name="calculer_mon_imc">Calculer mon IMC (ou pas)</string>
+    <string name="taille">Taille</string>
+    <string name="effacerIMC">effacer</string>
+    <string name="je_reconnais_que_lorsque_je_coche_megafonction_je_d_douane_le_fabricant_de_toute_responsabilit_quant_ce_qui_pourrait_arriver">Je reconnais que lorsque je coche MEGAFONCTION je dédouane le fabricant de toute responsabilité quant à ce qui pourrait arriver.</string>
+</resources>

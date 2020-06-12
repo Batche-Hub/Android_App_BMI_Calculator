@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5FBDF1"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/meConnecterJtext"
+        android:layout_width="279dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="76dp"
+        android:text="@string/me_connecter"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutEmail"
+        android:layout_width="411dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="20dp"
+        android:baselineAligned="false"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailImage">
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:autofillHints=""
+            android:ems="10"
+            android:inputType="textWebEmailAddress"
+            android:labelFor="@id/email"
+            android:text="@string/e_mail"
+            android:textColorHighlight="#2196F3"
+            android:textColorLink="#2196F3"
+            android:textCursorDrawable="@android:color/holo_blue_dark" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/emailImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="28dp"
+        android:adjustViewBounds="false"
+        android:baselineAligned="false"
+        android:contentDescription="@string/email"
+        android:scaleType="centerInside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/meConnecterJtext"
+        app:srcCompat="@drawable/icons8_email_sign_48" />
+
+    <ImageView
+        android:id="@+id/motDePasseImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="75dp"
+        android:contentDescription="@string/connexion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutEmail"
+        app:srcCompat="@drawable/icons8_password_48" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutMotDePasse"
+        android:layout_width="411dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/motDePasseImage">
+
+        <EditText
+            android:id="@+id/motDePasse"
+            android:layout_width="416dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:autofillHints=""
+            android:ems="10"
+            android:inputType="textPassword"
+            android:labelFor="@id/motDePasse"
+            android:text="@string/mot_de_passe"
+            android:textColorHighlight="#2196F3"
+            android:textColorLink="#2196F3"
+            android:textCursorDrawable="@android:color/holo_blue_dark" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonConnexion"
+        android:layout_width="115dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="150dp"
+        android:backgroundTint="#2196F3"
+        android:onClick="sendMessage"
+        android:text="@string/connexion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutMotDePasse" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="409dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="32dp"
+        android:fadingEdge="horizontal|vertical"
+        android:foregroundTint="#C39E2F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonConnexion"
+        app:layout_constraintVertical_bias="0.0">
+
+        <Button
+            android:id="@+id/buttonAnnuler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="161dp"
+            android:layout_marginEnd="160dp"
+            android:backgroundTint="#FFD53B"
+            android:onClick="deleteFieldsConnexion"
+            android:text="@string/annulerActivityMain"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/soucisConnexion"
+        android:layout_width="146dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="133dp"
+        android:text="@string/soucis_de_connexion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
